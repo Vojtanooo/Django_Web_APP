@@ -1,0 +1,23 @@
+{% extends "hours_app/base.html" %}
+{% load extra_filters %}
+{% load static %}
+{% block content %}
+
+
+<head>
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <title>Confirm delete?</title>
+</head>
+<body>
+    <div class="wrapper">
+<form method="POST" class="form-signin">
+    {% csrf_token %}
+
+    <h2>Delete {{ object.working_day|my_split_strip }}?</h2>
+    <button class="button button1" type="submit" name="submit">Yes</button>
+    <a class="button button1" href="{% url "day-detail" object.pk %}">Cancel</a>
+
+</form>
+</div>
+</body>
+{% endblock content %}

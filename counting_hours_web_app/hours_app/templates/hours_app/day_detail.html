@@ -1,0 +1,23 @@
+{% extends "hours_app/base.html" %}
+{% load static %}
+{% load extra_filters %}
+{% block content %}
+
+<head>
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <title>{% block title %}{{ object.working_day }} - Info{% endblock %}</title>
+</head>
+
+<body>
+<div class="main">
+    <form class="form-signin">
+        <h2 class="form-signin-heading">{{ object.working_day|my_split_strip }}</h2>
+        <a class="article-content">Start: {{ object.number_start }}</a>
+        <a class="article-content">End: {{ object.number_end }}</a><br><br>
+        <a role="button" class="button button1" href="{% url "day-update" object.pk %}">Update</a>
+        <a class="button button1" href="{% url "day-delete" object.pk %}">Delete</a>
+    </form>
+</div>
+</body>
+{% endblock content %}
+

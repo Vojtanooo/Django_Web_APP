@@ -1,0 +1,27 @@
+{% extends "hours_app/base.html" %}
+{% load extra_filters %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <title>All Data</title>
+</head>
+
+<body>
+<div class="form-signin">
+<form method="POST">
+    {% csrf_token %}
+    <h2 class="form-signin-heading">Days</h2>
+    {% for item in all_data %}
+    <a class="button_days button1" href="{% url "day-detail" item.pk %}">
+        {{ item.working_day|my_split_strip }} - Hours: {{ item.result }}</a>
+    {% endfor %}
+    <h2 class="form-signin-heading">Total Hours</h2>
+    <a>{{ total_hours }}</a><br><br>
+    <a style="color: white;" href="{% url "money" %}">Count money here!</a>
+    <a style="color: white;" href="{% url "holiday" %}">Add holiday hours??</a>
+</form>
+</div>
+</body>
+{% endblock content %}

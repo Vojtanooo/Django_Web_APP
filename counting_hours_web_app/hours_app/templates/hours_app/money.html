@@ -1,0 +1,31 @@
+{% extends "hours_app/base.html" %}
+{% load extra_filters %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <title>Total Money</title>
+</head>
+
+<body>
+    <div class="form-signin">
+        <form method="POST">
+            {% csrf_token %}
+            <h2 class="form-signin-heading">Select month to display</h2>
+            <input type="text" name="month" class="form-control" autofocus="" placeholder="Month" /><br><br>
+            <button class="button button1" type="submit" name="submit">Submit</button><br><br>
+            {% if hours %}
+            <h2 class="form-signin-heading">Count Money</h2>
+            <a name="hours">{{ hours }} hours</a> x
+            <input type="number" class="form-control" name="money" value="130"> Kč<br><br>
+            <button class="button button1" type="submit" name="apply">Apply</button><br><br>
+            {% endif %}
+            {% if money %}
+            <h2 class="form-signin-heading">Total Money</h2>
+            <a>{{ money }} Kč</a>
+            {% endif %}
+        </form>
+    </div>
+</body>
+{% endblock content %}

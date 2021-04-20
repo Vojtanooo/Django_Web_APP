@@ -1,0 +1,35 @@
+{% extends "hours_app/base.html" %}
+{% load extra_filters %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <title>Counting app</title>
+
+</head>
+
+<body>
+    <div class="form-signin">
+        <form action="get_hours_django" method="POST">
+            {% csrf_token %}
+            <h2 class="form-signin-heading">Count your hours</h2>
+            <p hidden>{{form.working_day}}</p>
+            {% if working_day %}
+                {{ working_day }}<br><br>
+                Start at: {{ form.number_start }}<br><br>
+                End at: {{ form.number_end }}<br><br>
+            {% else %}
+                Select day: {{ form.working_day }}<br><br>
+                Start at: {{ form.number_start }}<br><br>
+                End at: {{ form.number_end }}<br><br>
+            {% endif %}
+            <button class="button button1" type="submit" name="submit">Submit</button>
+            <button class="button button1" type="reset">Reset</button><br><br>
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </form>
+    </div>
+</body>
+{% endblock content %}

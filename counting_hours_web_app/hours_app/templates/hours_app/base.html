@@ -1,0 +1,36 @@
+{% load static %}
+
+<html>
+
+<head>
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidenav">
+            <a class="first" href="{% url "get-hours-django" %}">Counting App</a>
+            <a href="{% url "home" %}">Actual Month</a>
+            <a href="{% url "history" %}">History</a>
+            <div class="dropdown">
+                <button class="dropbtn">User Menu</button>
+                <div class="dropdown-content">
+                    <div class="first">
+                        <a href="{% url "login-page" %}">Login</a>
+                    </div>
+                    <a href="{% url "register-page" %}">Register</a>
+                    <div class="last">
+                        <a class="last" href="{% url "logout-page" %}">Logout</a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+
+</html>

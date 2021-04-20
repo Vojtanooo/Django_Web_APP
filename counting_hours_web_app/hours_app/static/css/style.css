@@ -1,0 +1,250 @@
+:root{
+    --image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='white' width='31' height='31' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/><path fill-rule='evenodd' d='M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'  clip-rule='nonzero'/><path fill-rule='evenodd' d='M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z' clip-rule='nonzero'/></svg>")
+}
+
+body {
+    background-image: url("backgroud_picture.jpg");
+    background-repeat: no-repeat;
+    background-position: inherit;
+    font-family: 'Trebuchet MS', sans-serif;
+
+}
+
+.wrapper {
+    width: 950px;
+    margin: auto;
+}
+
+.form-signin {
+    position: relative;
+    top: 40px;
+    left: 300px;
+    width: 400px;
+    padding: 15px 50px 25px;
+    background-color: #333;
+    text-align: center;
+    color: white;
+    border-radius: 16px;
+}
+
+.form-signin .form-signin-heading {
+    margin-bottom: 17px;
+}
+
+.form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+}
+
+.form-control:focus {
+        z-index: 2;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type=text] {
+    margin-bottom: -1px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.form-signin input[type=number] {
+    margin-bottom: -1px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 65px;
+}
+
+.form-signin input[type=email] {
+    margin-bottom: -1px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.form-signin input[type=password] {
+    margin-bottom: -1px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.form-signin input[type=time] {
+    margin-bottom: -1px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    height: 35px;
+    width: auto;
+}
+
+.form-signin a[name="form"] {
+    margin-bottom: -1px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    height: 35px;
+    width: auto;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    padding: 10px 24px;
+    transition-duration: 0.1s;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    border: none;
+    border-radius: 16px
+
+}
+
+.button1:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+.button_days {
+    background-color: white;
+    color: black;
+    padding: 10px 24px;
+    transition-duration: 0.1s;
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 10px;
+    border: none;
+    display: block;
+    border-radius: 16px
+
+}
+
+.button_login {
+    background-color: white;
+    color: black;
+    padding: 10px 24px;
+    transition-duration: 0.1s;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    border-radius: 15px;
+    border: none;
+}
+
+.sidenav {
+    height: auto;
+    width: 200px;
+    position:relative;
+    top: 130px;
+    left: 80px;
+    bottom: 100px;
+    right: 100px;
+    background: #333;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+  
+.sidenav a {
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    text-align: center;
+}
+  
+.sidenav a:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+.sidenav a.first:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    border-radius: 12px;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+}
+  
+.dropdown-content a {
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background: #333;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+  
+.dropdown-content a:hover {
+    background-color: rgb(255, 0, 0);
+    color: white;
+
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    text-align: center;
+    background: #333;
+    width: 200px;
+    border: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+.dropbtn:hover {
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+    background-image: var(--image);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.first a {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.last a{
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}

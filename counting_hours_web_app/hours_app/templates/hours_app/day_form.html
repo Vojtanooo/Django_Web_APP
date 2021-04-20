@@ -1,0 +1,24 @@
+{% extends "hours_app/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load extra_filters %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>{{ object.pk }} - Update</title>
+</head>
+
+<body>
+<div class="wrapper">
+<form method="POST" class="form-signin">
+    {% csrf_token %}
+    <h2>{{ object.working_day|my_split_strip }}</h2>
+    {{ form|crispy }}<br>
+    <button class="button button1">Submit</button>
+    <a role="button" class="button button1" href="{% url "day-detail" object.pk %}">Cancel</a>
+</form>
+</div>
+
+</body>
+{% endblock content %}
