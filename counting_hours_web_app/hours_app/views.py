@@ -83,7 +83,11 @@ def history_page(request):
             working_day__contains=request.POST.get("month").upper())
         get_dt = request.POST.get("month").upper()
 
-        if get_month(get_dt):
+        if get_month(get_dt) == False:
+            messages.warning(
+                request, "Insert full name of month ex.: Leden, Únor, Březen...")
+            return redirect("history")
+        else:
             total_hours = get_total_hours(form_v1)
 
             with open("year_month_database.json") as file:
@@ -99,10 +103,6 @@ def history_page(request):
 
             context.update(
                 {"form": form_v1, "choices": DAYS_IN_MONTH, "hours": total_hours})
-        else:
-            messages.warning(
-                request, "Insert full name of month ex.: Leden, Únor, Březen...")
-            return redirect("history")
 
     if "select" in request.POST:
         request.session['working_day'] = request.POST.get("choice_field")

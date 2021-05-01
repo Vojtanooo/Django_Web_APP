@@ -5,7 +5,10 @@ def get_month(dt):
     month_list = ["LEDEN", "ÚNOR", "BŘEZEN", "DUBEN",
                   "KVĚTEN", "ČERVEN", "ČERVENEC", "SRPEN",
                   "ZÁŘÍ", "ŘÍJEN", "LISTOPAD", "PROSINEC"]
-    return month_list.index(dt)
+    if dt in month_list:
+        return month_list.index(dt)
+    else:
+        return False
 
 
 def get_total_hours(list_of_items):
