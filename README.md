@@ -7,3 +7,8 @@ So i want to create aplication for counting my working hours. First of all i mak
 -  After user login in or make account he can use "counting hours" this mean if he save some day to database this day is no longer in choosefield. 
 -  In "Actual month" user see every day he saved. He can click on day and update it or delete it. Below this days there is menu where he can count how mouch money he can get or if he work on holiday he can add it. 
 -  In "History" user can search every already past month he want and if he missed day he can add it here.
+
+# Venv
+
+In counting_hours_web_app there is "django_venv" with every package you need to run this application. 
+
