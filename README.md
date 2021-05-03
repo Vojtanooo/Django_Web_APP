@@ -12,3 +12,6 @@ So i want to create aplication for counting my working hours. First of all i mak
 
 In counting_hours_web_app there is "django_venv" with every package you need to run this application. 
 
+# Video preview
+
+[<img src="https://cdn.freebiesupply.com/logos/large/2x/youtube-logo-png-transparent.png" width="" height="100">](https://youtu.be/3R52NHLcnzE)
