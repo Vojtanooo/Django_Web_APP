@@ -10,7 +10,7 @@ So i want to create aplication for counting my working hours. First of all i mak
 
 # Venv
 
-In counting_hours_web_app there is "django_venv" with every package you need to run this application. 
+Create a virtualenv with `virtualenv env` and install dependencies with `pip install -r requirements.txt`
 
 # Video preview
 
