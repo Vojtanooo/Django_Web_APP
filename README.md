@@ -1,5 +1,6 @@
-# Counting hours app
-So i want to create aplication for counting my working hours. First of all i make basic aplication in python. Then i start thinking about i need this aplication everywhere im. Make some resource and i find Django framework. And jurney begin.. i read documentation about django then watch some youtube tutorial and start writing my program. After some months :D i wrote my first web aplication. After all of that deploy this project on pythonanywhere.com was really easy. Now i have my applicatin live on server. http://bulays.pythonanywhere.com/
+# Counting hours app / Interface for recording working hours in the company
+Interface for recording working hours in the company. Every worker can make profile and use it for count working hours per month. Every day is saved to database and worker can access it every time. Worker can count how many money he earn for month.
+Now i have my applicatin live on server. http://bulays.pythonanywhere.com/
 
 # Features
 
